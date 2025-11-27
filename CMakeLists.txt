@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.10.2 FATAL_ERROR)
-project(mecanum_drive_controller)
+project(gz_mecanum_drive_controller)
 
 if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
   add_compile_options(-Wall -Wextra -Wpedantic)
@@ -20,11 +20,11 @@ find_package(gz-sim8 REQUIRED)
 
 
 include_directories(include/mecanum_drive_controller)
-add_library(mecanum_drive_controller SHARED
+add_library(gz_mecanum_drive_controller SHARED
   src/MecanumDrive.cc
 )
-set_property(TARGET mecanum_drive_controller PROPERTY CXX_STANDARD 17)
-target_link_libraries(mecanum_drive_controller
+set_property(TARGET gz_mecanum_drive_controller PROPERTY CXX_STANDARD 17)
+target_link_libraries(gz_mecanum_drive_controller
   PRIVATE gz-plugin${GZ_PLUGIN_VER}::gz-plugin${GZ_PLUGIN_VER}
   PRIVATE gz-sim8::gz-sim8)
 
@@ -51,7 +51,7 @@ target_link_libraries(mecanum_drive_controller
 #)
 
 install(TARGETS
-  mecanum_drive_controller
+  gz_mecanum_drive_controller
   DESTINATION lib/${PROJECT_NAME})
 
 if(BUILD_TESTING)

@@ -13,6 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
+ * 2025 modifications by @veroarriola
+ *
  */
 #ifndef GZ_SIM_SYSTEMS_MECANUMDRIVE_HH_
 #define GZ_SIM_SYSTEMS_MECANUMDRIVE_HH_
